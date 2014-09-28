@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SecondViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <SecondViewControllerDelegate>
 
+- (IBAction)tappedButton:(id)sender;
 
 @end
 

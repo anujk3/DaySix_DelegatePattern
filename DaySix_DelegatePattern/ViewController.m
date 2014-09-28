@@ -24,4 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)tappedButton:(id)sender {
+    SecondViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"secondViewController"];
+    secondViewController.delegate = self;
+    [self.navigationController pushViewController:secondViewController animated:YES];
+}
+
+- (void)doSomethingWithSecondViewController:(SecondViewController *)secondViewController{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end
